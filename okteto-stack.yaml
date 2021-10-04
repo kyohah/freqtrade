@@ -21,7 +21,7 @@ services:
     command: >
       cp config_examples/config_binance.example.json config.json &&
       freqtrade create-userdir --userdir user_data &&
-      trade
+      freqtrade trade
       --logfile /freqtrade/user_data/logs/freqtrade.log
       --db-url sqlite:////freqtrade/user_data/tradesv3.sqlite
       --config /freqtrade/user_data/config.json
