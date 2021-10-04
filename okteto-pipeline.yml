@@ -1,0 +1,5 @@
+icon: https://raw.githubusercontent.com/freqtrade/freqtrade/develop/docs/images/logo.png
+deploy:
+- okteto exec freqtrade create-userdir --userdir user_data
+- okteto exec freqtrade new-config --config user_data/config.json
+- okteto stack deploy --wait
