@@ -1,0 +1,8 @@
+services:
+  freqtrade:
+    public: true
+    image: freqtradeorg/freqtrade:stable
+    replicas: 1
+    ports:
+      - "127.0.0.1:8080:8080"
+    command: tail -f /dev/null
