@@ -1,0 +1,13 @@
+name: freqtrade
+image: freqtradeorg/freqtrade:stable
+command: ["tail", "-f", "/dev/null"]
+securityContext:
+  runAsUser: 1000
+volumes:
+- /root/.cache/pip
+sync:
+- .:/freqtrade
+forward:
+- 8080:8080
+reverse:
+- 9000:9000
